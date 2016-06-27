@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding//weixinofneolocal/app/context_processors.py=utf-8
+encoding//weixinofneolocal/app/menu.py=utf-8
+encoding//weixinofneolocal/app/urls.py=utf-8
+encoding//weixinofneolocal/app/views.py=utf-8
+encoding//weixinofneolocal/config/config.py=utf-8
+encoding//weixinofneolocal/config/settings.py=utf-8
+encoding//weixinofneolocal/interface/models.py=utf-8
+encoding//weixinofneolocal/interface/utils.py=utf8
+encoding//weixinofneolocal/interface/weixinapi.py=utf-8
+encoding//weixinofneolocal/libs/djangocaptcha/fields.py=utf-8
+encoding//weixinofneolocal/libs/djangocaptcha/verticode.py=utf-8
+encoding//weixinofneolocal/utils/sae_storage.py=utf-8
+encoding//weixinofneolocal/utils/storage/__init__.py=utf-8
+encoding//weixinofneolocal/utils/ueditor13/ueditor.py=utf-8
+encoding//weixinofneolocal/wsgi.py=utf-8
