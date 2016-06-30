@@ -69,7 +69,7 @@ def force_download(request,filepath):
 def image_download(request,filepath,name):
     response = HttpResponse(content_type='application/octet-stream') 
     suffix = filepath.split(".")[-1]
-    response['Content-Disposition'] = 'attachment; filename=%s' % smart_str(name+'.'+suffix)
+    response['Content-Disposition'] = 'attachment; filename=%s' % smart_str(name)
     response['Content-Length'] = os.path.getsize(filepath)
     response['X-Sendfile'] = smart_str(filepath)
     

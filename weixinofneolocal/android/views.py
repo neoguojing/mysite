@@ -7,6 +7,7 @@ from app.models import *
 from .controller import *
 from .settings import DATA_NOEXIST,UER_NOLOGIN
 from utils.download import *
+import json
 
 ANDROID_PROFILE = 1;
 ANDROID_FRIEND = 2;
@@ -90,3 +91,9 @@ def android_download(request,name, what):
         return HttpResponse(PIC_DOWNLOAD_ERROR,content_type="application/json")
 
     return fast_download(request,filepath,name);
+    
+def android_update_useraddr(request):
+    ip = request.META['REMOTE_ADDR'];
+    port = request.META['REMOTE_ADDR'];
+    return HttpResponse(json.dumps(request),content_type="application/json");
+    

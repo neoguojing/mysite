@@ -7,6 +7,9 @@ from datetime import datetime
 def calTime(lastlongin):
     return (lastlongin - datetime.now()).minutes;
 
+def getPicName(picpath):
+    return picpath.split("/")[-1]
+    
 def me_json(userprofile,state=0):
     if userprofile!=None:
         json_data = u''' 
@@ -26,7 +29,7 @@ def me_json(userprofile,state=0):
         "age":%d,
         "distance":"%s",
         "time":"%s",
-        '''% (userprofile.user.id, userprofile.headimg.url.split("/")[-1],userprofile.vip, userprofile.grouprole,userprofile.industry,
+        '''% (userprofile.user.id, userprofile.user.username,userprofile.vip, userprofile.grouprole,userprofile.industry,
               userprofile.userapps.sina,userprofile.userapps.weixin,userprofile.userapps.renren,userprofile.device,state,
               userprofile.multipic,userprofile.user.username,userprofile.gender,userprofile.getAge(),userprofile.getDistance(),
               userprofile.user.date_joined,)
@@ -63,7 +66,7 @@ def profile_reply_json(user, userprofile, usersignature, userphotos):
     "age":%d,
     "constellation":"%s",
     "distance":"%s",
-    "time":"%s",""" % (user.id, userprofile.headimg.url.split("/")[-1], user.username, 
+    "time":"%s",""" % (user.id, userprofile.user.username, user.username, 
                        userprofile.gender,userprofile.getAge(), 
                          userprofile.constellation, userprofile.getDistance(), user.date_joined)
     if usersignature!=None:
@@ -114,7 +117,7 @@ def friend_reply_json(userrelation,state):
             "age":%d,
             "distance":"%s",
             "time":"%s",
-            '''% (userrelation[num].user.id, userrelation[num].headimg.url.split("/")[-1],userrelation[num].vip, userrelation[num].grouprole,userrelation[num].industry,
+            '''% (userrelation[num].user.id, userrelation[num].user.username,userrelation[num].vip, userrelation[num].grouprole,userrelation[num].industry,
                   userrelation[num].userapps.sina,userrelation[num].userapps.weixin,userrelation[num].userapps.renren,userrelation[num].device,state,
                   userrelation[num].multipic,userrelation[num].user.username,userrelation[num].gender,userrelation[num].getAge(),userrelation[num].getDistance(),
                   userrelation[num].user.date_joined,)

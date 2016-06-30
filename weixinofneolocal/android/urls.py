@@ -13,7 +13,7 @@ urlpatterns = patterns('android.views',
     url(r'^download/(?P<name>[a-zA-Z0-9_-]+)/(?P<what>[0-9]+)/$', 'android_download'),
     url(r'^get/(?P<name>[a-zA-Z0-9_-]+)/(?P<what>[0-9]+)/$', 'android_get_service'),
     url(r'^getwithoutlogin/(?P<name>[a-zA-Z0-9_-]+)/(?P<what>[0-9]+)/$', 'android_get_without_login'),
-
+    url(r'^getuseraddr/$', 'android_update_useraddr'),
 )+ static(settings.STATIC_URL, document_root=settings.APP_STATIC)
 
 urlpatterns += patterns('android.register.views',
